@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKmCostTable extends Migration
+class CreateCurrencymastersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateKmCostTable extends Migration
      */
     public function up()
     {
-        Schema::create('km_cost', function (Blueprint $table) {
+        Schema::create('currencymasters', function (Blueprint $table) {
             $table->id();
-            $table->integer('amount');
+            $table->text('currency_name');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateKmCostTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('km_cost');
+        Schema::dropIfExists('currencymaster');
     }
 }

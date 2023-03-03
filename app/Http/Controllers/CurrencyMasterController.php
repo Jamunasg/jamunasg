@@ -15,7 +15,7 @@ class CurrencyMasterController extends Controller
         $row->save();
         return response()->json([
             "status" => true,
-            "message" => " city created successfully",
+            "message" => " currency created successfully",
             "data" => $row
         ], 200);
     }
@@ -31,7 +31,7 @@ class CurrencyMasterController extends Controller
         $row->save();
         return response()->json([
             "status" => true,
-            "message" => "city updated successfully",
+            "message" => "currency updated successfully",
             "data" => $row
         ], 200);
     }

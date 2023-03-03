@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Model\customerdetails;
+use App\Models\Model\customer_details;
 
 class CustomerDetailsController extends Controller
 {
     public function create(Request $request)
     {
         $reqdata = $request->all();
-        $row = new customerdetails;
+        $row = new customer_details;
         $row->customer_name =  $reqdata["customer_name"];
         $row->customer_mobile_1 =  $reqdata["customer_mobile_1"];
         $row->customer_mobile_2 =  $reqdata["customer_mobile_2"];
@@ -24,18 +24,18 @@ class CustomerDetailsController extends Controller
         $row->save();
         return response()->json([
             "status" => true,
-            "message" => " factoryemployee created successfully",
+            "message" => " customerdetails created successfully",
             "data" => $row
         ], 200);
     }
     public function list(Request $request)
     {
-        return customerdetails::get();
+        return customer_details::get();
     }
     public function update(Request $request)
     {
         $reqdata = $request->all();
-        $row = customerdetails::find($reqdata["id"]);
+        $row = customer_details::find($reqdata["id"]);
         $row->customer_name =  $reqdata["customer_name"];
         $row->customer_mobile_1 =  $reqdata["customer_mobile_1"];
         $row->customer_mobile_2 =  $reqdata["customer_mobile_2"];
@@ -49,14 +49,14 @@ class CustomerDetailsController extends Controller
         $row->save();
         return response()->json([
             "status" => true,
-            "message" => "factoryemployee updated successfully",
+            "message" => "customerdetails updated successfully",
             "data" => $row
         ], 200);
     }
     public function delete($id, Request $request)
     {
 
-        $row = customerdetails::find($id);
+        $row = customer_details::find($id);
         if($row){
             $row->delete();
             return response()->json([
