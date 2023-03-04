@@ -46,9 +46,9 @@ Route::put('factorymasterupdate', 'FactoryMasterController@update');
 Route::delete('factorymasterdelete/{id}', 'FactoryMasterController@delete');
 
 Route::post('productmastercreate', 'ProductMasterController@create');
-Route::get('productmastercreate', 'ProductMasterController@list');
-Route::put('productmastercreate', 'ProductMasterController@update');
-Route::delete('productmastercreate/{id}', 'ProductMasterController@delete');
+Route::get('productmasterlist', 'ProductMasterController@list');
+Route::put('productmasterupdate', 'ProductMasterController@update');
+Route::delete('productmasterdelete/{id}', 'ProductMasterController@delete');
 
 Route::post('km_costcreate', 'Km_CostController@create');
 Route::get('km_costlist', 'Km_CostController@list');

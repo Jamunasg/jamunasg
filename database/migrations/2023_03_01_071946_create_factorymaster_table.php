@@ -18,7 +18,7 @@ class CreateFactorymasterTable extends Migration
             $table->text('factory_name');
             $table->text('factory_location_gps');
             $table->text('x_latitude');
-            $table->text('x_longitude');
+            $table->text('y_longitude');
             $table->boolean('is_active');
             $table->timestamps();
         });

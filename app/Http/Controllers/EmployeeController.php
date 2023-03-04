@@ -36,7 +36,7 @@ class EmployeeController extends Controller
         $row->save();
         return response()->json([
             "status" => true,
-            "message" => " districtmaster created successfully",
+            "message" => " employee created successfully",
             "data" => $row
         ], 200);
     }
@@ -73,7 +73,7 @@ class EmployeeController extends Controller
         $row->save();
         return response()->json([
             "status" => true,
-            "message" => "districtmaster updated successfully",
+            "message" => "employee updated successfully",
             "data" => $row
         ], 200);
     }

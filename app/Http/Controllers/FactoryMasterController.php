@@ -14,7 +14,7 @@ class FactoryMasterController extends Controller
         $row->factory_name =  $reqdata["factory_name"];
         $row->factory_location_gps =  $reqdata["factory_location_gps"];
         $row->x_latitude =  $reqdata["x_latitude"];
-        $row->x_longitude =  $reqdata["x_longitude"];
+        $row->y_longitude =  $reqdata["y_longitude"];
         $row->is_active =  $reqdata["is_active"];
         $row->save();
         return response()->json([
@@ -34,7 +34,7 @@ class FactoryMasterController extends Controller
         $row->factory_name =  $reqdata["factory_name"];
         $row->factory_location_gps =  $reqdata["factory_location_gps"];
         $row->x_latitude =  $reqdata["x_latitude"];
-        $row->x_longitude =  $reqdata["x_longitude"];
+        $row->y_longitude =  $reqdata["y_longitude"];
         $row->is_active =  $reqdata["is_active"];
         $row->save();
         return response()->json([
