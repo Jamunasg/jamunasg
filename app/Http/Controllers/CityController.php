@@ -26,6 +26,25 @@ class CityController extends Controller
     {
         return city::get();
     }
+    // public function liststate_id($id,Request $request)
+    // {
+
+    //     return city::where('state_id', $id)->get();
+    // }
+    
+    // public function listdistrict_id($id,Request $request)
+    // {
+    //     return city::where('district_id', $id)->get();
+    // }
+    
+    public function getstate($id, Request $request)
+    {
+        // $result = admincreating::with('sitetypeinfo','slotdate')->get();
+        $result = state::with('stateinfo')->where('state_id',$id)->orderBy('id')->get();
+        return $result;
+    }
+    
+
     public function update(Request $request)
     {
         $reqdata = $request->all();

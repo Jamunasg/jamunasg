@@ -27,11 +27,14 @@ Route::delete('statedelete/{id}', 'StateController@delete');
 
 Route::post('districtmastercreate', 'DistrictMasterController@create');
 Route::get('districtmasterlist', 'DistrictMasterController@list');
+Route::get('getonlystate/{id}', 'DistrictMasterController@getstate');
+Route::get('liststate_id/{id}', 'DistrictMasterController@getstate_id');
 Route::put('districtmasterupdate', 'DistrictMasterController@update');
 Route::delete('districtmasterdelete/{id}', 'DistrictMasterController@delete');
 
 Route::post('citycreate', 'CityController@create');
 Route::get('citylist', 'CityController@list');
+Route::get('stateinfo/{id}', 'CityController@getstate');
 Route::put('cityupdate', 'CityController@update');
 Route::delete('citydelete/{id}', 'CityController@delete');
 

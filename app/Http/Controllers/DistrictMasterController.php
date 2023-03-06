@@ -25,6 +25,16 @@ class DistrictMasterController extends Controller
     {
         return districtmaster::get();
     }
+    // public function liststate_id($id,Request $request)
+    // {
+    //     return districtmaster::where('state_id', $id)->get();
+    // }
+    public function getstate($id, Request $request)
+    {
+        $result = districtmaster::with('stateinfo')->where('state_id',$id)->orderBy('id')->get();
+        return $result;
+    }
+
     public function update(Request $request)
     {
         $reqdata = $request->all();
